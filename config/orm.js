@@ -12,25 +12,25 @@ var orm = {
 
   // function to ADD a new burger created by the user
 
-  insertOne: function(table, col, val, cb) {
+  insertOne: function(table, col1, col2, val1, val2, cb) {
     var queryString = "INSERT INTO " + table;
 
     queryString += " (";
-    queryString += col.toString();
+    queryString += col1.toString() + ", " + col2.toString();
     queryString += ") ";
     queryString += "VALUES (";
-    queryString += "?"
+    queryString += "?, ?"
     queryString += ") ";
 
     console.log(queryString);
 
     // CatApp Activity 17 has a different structure below, NOT "(queryString, [table, col, val], function"
-    connection.query(queryString, val, function(err, result) {
+    connection.query(queryString, [val1, val2], function(err, result) {
       if (err) {
         throw err;
       }
 
-      console.log(result);
+      // console.log(result);
       cb(result);
     });
   },
