@@ -2,9 +2,9 @@ var connection = require("../config/connection.js");
 
 var orm = {
   // function to display ALL the burgers
-  selectAll: function(table, orderCol) {
+  selectAll: function(table, col) {
     var queryString = "SELECT * FROM ?? ORDER BY ?? DESC";
-    connection.query(queryString, [table, orderCol], function(err, result) {
+    connection.query(queryString, [table, col], function(err, result) {
       if (err) throw err;
       console.log(result);
     });
@@ -37,19 +37,22 @@ var orm = {
 
   // function to DEVOUR a burger and move it to the right side
 
-  // updateOne: function(tableOneCol, tableTwoForeignKey, tableOne, tableTwo) {
-  //   var queryString =
-  //     "SELECT ??, COUNT(??) AS count FROM ?? LEFT JOIN ?? ON ??.??= ??.id GROUP BY ?? ORDER BY count DESC LIMIT 1";
+  updateOne: function(table, condition, cb) {
+    var queryString = "UPDATE " + table;
 
-  //   connection.query(
-  //     queryString,
-  //     [tableOneCol, tableOneCol, tableOne, tableTwo, tableTwo, tableTwoForeignKey, tableOne, tableOneCol],
-  //     function(err, result) {
-  //       if (err) throw err;
-  //       console.log(result);
-  //     }
-  //   );
-  // }
+    queryString += " SET ";
+    queryString += "burgers.devoured=1"
+    queryString += " WHERE ";
+    queryString += condition;
+
+    console.log(queryString);
+
+    connection.query(queryString, function(err, result) {
+      if (err) { throw err }
+      console.log(result)
+;      cb(result);
+    }); 
+  }
 }
 
 module.exports = orm;
