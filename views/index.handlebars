@@ -3,15 +3,32 @@
 <p>Burger list</p>
 
 <ul>
-  {{#each burger}}
+  {{#each burgers}}
+     {{#unless devoured}}
     <li>
       <p><span class="label">Id</span> {{this.id}}</p>
       <p><span class="label">Burger Name</span> {{this.burger_name}}</p>
-      <p><span class="label">Devour it!</span> {{this.devoured}}</p>
+      <p><span class="label"><button data-id={{this.id}} class="devoured">Devour it!</button></span> </p>
     </li>
+    {{/unless}}
   {{/each}}
 
 </ul>
+
+<hr>
+<ul>
+  {{#each burgers}}
+     {{#if devoured}}
+    <li>
+      <p><span class="label">Id</span> {{this.id}}</p>
+      <p><span class="label">Burger Name</span> {{this.burger_name}}</p>
+      {{!-- <p><span class="label"></span></p> --}}
+    </li>
+    {{/if}}
+  {{/each}}
+
+</ul>
+
 
 <h2>Add a Burger</h2>
 
