@@ -1,0 +1,19 @@
+body, .jumbotron {
+    background-color: orange;
+}
+
+#burg {
+    /* width: 10vw; */
+    width: 100px;
+}
+
+/* #flame2 {
+    justify-content: center;
+} */
+
+#flame {
+    text-align: center;
+    margin-top: 20px;
+    color: red;
+    /* font-size: 10vw; */
+}
