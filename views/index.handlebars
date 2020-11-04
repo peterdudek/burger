@@ -1,3 +1,8 @@
+<div class="page-container">
+
+<div class="content-wrap">
+
+
 {{!-- <div class="jumbotron jumbotron-fluid" id="flame2"> --}}
   <div class="container" id="flame">
     {{!-- <h1 class="display-4">Eat-Da-Burger!</h1> --}}
@@ -5,46 +10,74 @@
     <h1>Eat-Da-Burger!</h1>
     {{!-- <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p> --}}
   </div>
-{{!-- </div> --}}
 
 
-<p>Burger list</p>
 
-<ul>
-  {{#each burgers}}
-     {{#unless devoured}}
-    <li>
-      <p><span class="label">Id</span> {{this.id}}</p>
-      <p><span class="label">Burger Name</span> {{this.burger_name}}</p>
-      <p><span class="label"><button data-id={{this.id}} class="devoured">Devour it!</button></span> </p>
-    </li>
-    {{/unless}}
-  {{/each}}
+<div id="divyyy" class="container">
 
-</ul>
+  <div class="row">
+    <div class="col">
+      <ol>
+        {{#each burgers}}
+          {{#unless devoured}}
+          <li>
+            {{!-- <p><span class="label">Id</span> {{this.id}}</p> --}}
+            <p>
+              {{!-- <span class="label">Burger Name</span>  --}}
+              {{this.burger_name}}<button data-id={{this.id}} type="button" class="btn btn-danger devoured">Devour it!</button></p>
+            {{!-- <p><span class="label"> --}}
+              {{!-- <button data-id={{this.id}} type="button" class="btn btn-danger devoured">Devour it!</button> --}}
+              {{!-- <button data-id={{this.id}} class="devoured">Devour it!</button> --}}
+              {{!-- </span></p> --}}
+            {{!-- <button data-id={{this.id}} type="button" class="btn btn-danger devoured">Devour it!</button> --}}
+          </li>
+          {{/unless}}
+        {{/each}}
 
-<hr>
-<ul>
-  {{#each burgers}}
-     {{#if devoured}}
-    <li>
-      <p><span class="label">Id</span> {{this.id}}</p>
-      <p><span class="label">Burger Name</span> {{this.burger_name}}</p>
-      {{!-- <p><span class="label"></span></p> --}}
-    </li>
-    {{/if}}
-  {{/each}}
+      </ol>
+    </div>
+    <div class="col">
+      <ol>
+        {{#each burgers}}
+          {{#if devoured}}
+          <li>
+            {{!-- <p><span class="label">Id</span> {{this.id}}</p> --}}
+            <p>
+              {{!-- <span class="label">Burger Name</span>  --}}
+            {{this.burger_name}}</p>
+            {{!-- <p><span class="label"></span></p> --}}
+          </li>
+          {{/if}}
+        {{/each}}
+      </ol>
+    </div>
 
-</ul>
-
-
-<h2>Add a Burger</h2>
-
-<form class="create-form">
-  <div class="form-group">
-    <label for="burger_name"> Burger name</label>
-    <input type="text" id="burger_name" name="burger">
   </div>
 
-  <button type="submit">Add Burger</button>
-</form>
+  <hr>
+
+  <div class="row" id="burgDiv">
+    <div class="texty">
+      <h4>Add a Burger</h4>
+    </div>
+
+  </div>
+
+  <div class="row" id="burgDiv2">
+    <form class="create-form">
+      <div class="form-group">
+        {{!-- <label for="burger_name"> Burger name</label> --}}
+        <input type="text" id="burger_name" name="burger" placeholder="enter your burger">
+      </div>
+      <button type="button submit" class="btn btn-primary sub">Add Burger</button>
+      {{!-- <button type="submit">Add Burger</button> --}}
+    </form>
+  {{!-- <button type="button submit" class="btn btn-primary sub">Add Burger</button> --}}
+  </div>
+
+</div>
+
+
+        </div>
+            <footer class="sticky-footer">Eat-Da-Burger! Copyright Piotr Dudek © 2020</footer>
+    </div>

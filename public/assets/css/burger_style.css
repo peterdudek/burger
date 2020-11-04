@@ -1,5 +1,5 @@
 body, .jumbotron {
-    background-color: orange;
+    background-color: rgba(255, 166, 0, 0.877);
 }
 
 #burg {
@@ -17,3 +17,46 @@ body, .jumbotron {
     color: red;
     /* font-size: 10vw; */
 }
+
+
+/* Sticky footer */
+.page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+.content-wrap {
+    padding-bottom: 2.5rem;
+}
+
+.sticky-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem; 
+    padding: 10px;  
+    text-align: center;         
+}
+
+/* #burgDiv, #burgDiv2 {
+    text-align: center;
+} */
+
+.row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .block {
+    width: 100px;
+  }
+
+  .texty {
+      text-align: center;
+  }
+
+.devoured {
+      margin-left: 20px;
+  }
+
