@@ -1,8 +1,8 @@
 {
   "name": "013_burger",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "burger app",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
