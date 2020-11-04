@@ -1,4 +1,4 @@
-// Dependencies
+// Dependency
 var express = require("express");
 
 var burger = require("../models/burger.js");
@@ -17,14 +17,14 @@ router.get("/", function (req, res) {
 
 router.post("/api/burgers", function (req, res) {
   burger.insertOne( "burger_name", "devoured", req.body.burger_name, req.body.devoured, function(result){
-    res.json(result)
+    res.json(result);
   })
 })
 
 router.put("/api/burgers/:id", function (req, res) {
   console.log(req.params.id)
   burger.updateOne(req.params.id, req.body.devoured, function(result){
-    res.json(result)
+    res.json(result);
   })
 })
 
