@@ -1,5 +1,5 @@
 
-# Eat-Da-Burger! - a burger app :hamburger: :fries: :beer:
+# Burgersoft - a burger app :hamburger: :fries: :beer:
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
