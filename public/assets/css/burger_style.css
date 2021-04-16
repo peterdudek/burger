@@ -9,13 +9,14 @@ body, .jumbotron {
 #flame {
     text-align: center;
     margin-top: 20px;
+    margin-bottom: 40px;
     color: red;
 }
 
 /* Sticky footer Below */
 .page-container {
     position: relative;
-    min-height: 100vh;
+    height: 95vh;
 }
 
 .content-wrap {
@@ -58,3 +59,6 @@ body, .jumbotron {
     margin-right: auto;
 }
 
+#mainrow {
+    margin: auto;
+}

@@ -4,14 +4,14 @@
 
     <div class="container" id="flame">
       <img id="burg" alt="burger logo" src="/assets/img/burgerlogo.png">
-      <h1>Eat-Da-Burger!</h1>
+      <h1>Burgersoft</h1>
     </div>
 
     <div id="divyyy" class="container">
 
-      <div class="row">
-
-        <div class="col">
+      <div class="row" id="mainrow">
+        <div class="col-2"> </div>
+        <div class="col-4">
           <ol>
             {{#each burgers}}
               {{#unless devoured}}
@@ -23,7 +23,7 @@
           </ol>
         </div>
 
-        <div class="col">
+        <div class="col-4">
           <ol>
             {{#each burgers}}
               {{#if devoured}}
@@ -34,6 +34,7 @@
             {{/each}}
           </ol>
         </div>
+        <div class="col-2"> </div>
       </div>
 
       <hr>
@@ -59,5 +60,5 @@
     </div>
 
   </div>
-    <footer class="sticky-footer">Eat-Da-Burger! Copyright Piotr Dudek © 2020</footer>
+    <footer class="sticky-footer">Burgersoft Copyright Piotr Dudek © 2020</footer>
 </div>
